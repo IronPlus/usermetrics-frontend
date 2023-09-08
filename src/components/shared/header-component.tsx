@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["All posts", "Dashboards"];
+const pages = ["All posts", "Dashboards", "Logout"];
 
 const HeaderComponent: React.FC = () => {
   const navigate = useNavigate();

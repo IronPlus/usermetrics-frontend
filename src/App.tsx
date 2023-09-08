@@ -3,12 +3,13 @@ import "./App.css";
 import DashboardsComponent from "./components/dashboards/dashboards-component";
 import PostsComponent from "./components/posts/posts-component";
 import ErrorComponent from "./components/shared/error-component";
+import Login from "./components/shared/login-component";
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PostsComponent />}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/posts" element={<PostsComponent />}></Route>
         <Route path="/dashboards" element={<DashboardsComponent />}></Route>
         <Route
