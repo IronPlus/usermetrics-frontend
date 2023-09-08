@@ -27,7 +27,7 @@ export default function Login() {
     <div>
       <Container maxWidth="sm" className="login-component">
         <Card elevation={8} className="login-component__card">
-          <CardHeader title="Log in or sign up"></CardHeader>
+          <CardHeader title="Welcome back, Log in!"></CardHeader>
           <CardContent>
             <TextField
               label="Username"
@@ -50,7 +50,7 @@ export default function Login() {
               variant="contained"
               onClick={handleNavigation}
             >
-              Login
+              Log in
             </Button>
           </CardContent>
         </Card>
