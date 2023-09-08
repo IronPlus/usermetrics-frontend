@@ -6,13 +6,20 @@ import {
   CardHeader,
   CardContent,
 } from "@mui/material";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// todo: add type for this component
+// todo: add types for this component
 export default function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
   const handleNavigation = () => {
+    console.log(username);
+    console.log(password);
+    // todo: store username and password in session storage
     navigate("/posts");
   };
 
@@ -22,10 +29,20 @@ export default function Login() {
         <Card elevation={8} className="login-component__card">
           <CardHeader title="Log in or sign up"></CardHeader>
           <CardContent>
-            <TextField label="Username" variant="filled" />
+            <TextField
+              label="Username"
+              variant="filled"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
             <br />
             <br />
-            <TextField label="Password" variant="filled" />
+            <TextField
+              label="Password"
+              variant="filled"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <br />
             <br />
             <Button
