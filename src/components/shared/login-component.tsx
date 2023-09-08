@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
+// todo: add type for this component
 export default function Login() {
   const navigate = useNavigate();
 
