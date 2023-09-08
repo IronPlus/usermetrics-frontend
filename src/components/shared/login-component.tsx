@@ -9,17 +9,19 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// todo: add types for this component
-export default function Login() {
+const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  sessionStorage.removeItem("username");
+  sessionStorage.removeItem("password");
 
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    console.log(username);
-    console.log(password);
-    // todo: store username and password in session storage
+    sessionStorage.setItem("username", username);
+    sessionStorage.setItem("password", password);
+
     navigate("/posts");
   };
 
@@ -57,4 +59,6 @@ export default function Login() {
       </Container>
     </div>
   );
-}
+};
+
+export default Login;
