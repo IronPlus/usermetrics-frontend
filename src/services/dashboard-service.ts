@@ -1,12 +1,13 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import config from "../config";
 import { Dashboard } from "../models/dashboard";
+import createBasicAuthHeaderFromSession from "./auth-service";
 
 export default function getDashboards(): Promise<Dashboard[]> {
   return axios
     .get(`${config.baseUrl}/dashboards`, {
       headers: {
-        Authorization: config.authorizationHeader,
+        Authorization: createBasicAuthHeaderFromSession(),
       },
     })
     .then((res: AxiosResponse) => {

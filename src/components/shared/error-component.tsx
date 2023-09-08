@@ -10,7 +10,7 @@ const ErrorComponent: React.FC<ErrorComponentProps> = ({ errorMessage }) => {
     <Container maxWidth="md" className="error-component">
       <Paper sx={{ padding: 3 }} elevation={8}>
         <h2>{errorMessage}</h2>
-        <Button variant="contained" href="/posts">
+        <Button variant="contained" href="/">
           Back
         </Button>
       </Paper>
