@@ -1,13 +1,13 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import config from "../config";
 import { Post } from "../models/post";
-import createBasicAuthHeaderFromSession from "./auth-service";
+import createBasicAuthHeader from "./auth-service";
 
 export default function getPostsByPageNum(page: number): Promise<Post[]> {
   return axios
     .get(`${config.baseUrl}/posts/${page}`, {
       headers: {
-        Authorization: createBasicAuthHeaderFromSession(),
+        Authorization: createBasicAuthHeader(),
       },
     })
     .then((res: AxiosResponse) => {
