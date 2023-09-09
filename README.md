@@ -6,8 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project displays user social media posts in a paginated format. It also has a dashboard for displaying some metrics about the user posts.
 
-Please use test/test as username/password to login.
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -46,4 +44,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Improvement ideas
 
-- Use more stronger authentication method (e.g. JWT, OAuth2)
+- Add a login page with user authentication
