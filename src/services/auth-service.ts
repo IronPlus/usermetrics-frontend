@@ -1,14 +1,5 @@
-export default function createBasicAuthHeaderFromSession(): string | null {
-  const username = sessionStorage.getItem("username");
-  const password = sessionStorage.getItem("password");
-
-  if (!username || !password) {
-    return null;
-  }
-
-  const credentials = `${username}:${password}`;
-
-  const encodedCredentials = btoa(credentials);
+export default function createBasicAuthHeaderFromSession(): string {
+  const encodedCredentials = btoa("test:test");
 
   return `Basic ${encodedCredentials}`;
 }
