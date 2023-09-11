@@ -42,6 +42,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## Dockerization
+
+### Building an image
+
+```bash
+$ docker build -t usermetrics-frontend:latest .
+```
+
+### Running a container
+
+```bash
+$ docker run -d -p 3000:3000 --name usermetrics-frontend usermetrics-frontend:latest
+```
+
 ## Improvement ideas
 
 - Add a login page with user authentication
