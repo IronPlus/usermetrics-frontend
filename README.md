@@ -59,3 +59,4 @@ $ docker run -d -p 3000:3000 --name usermetrics-frontend usermetrics-frontend:la
 ## Improvement ideas
 
 - Add a login page with user authentication
+- Use token-based authentication when making requests to backend
