@@ -1,4 +1,4 @@
-import * as React from "react";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import {
   Box,
   Button,
@@ -7,15 +7,15 @@ import {
   Fab,
   Pagination,
 } from "@mui/material";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import * as React from "react";
 import { useEffect, useState } from "react";
-import getPostsByPageNum from "../../services/posts-service";
-import PostComponent from "./post-component";
-import ScrollTop from "../shared/scroll-top-component";
-import HeaderComponent from "../shared/header-component";
-import { Post } from "../../models/post";
-import ProgressComponent from "../shared/progress-component";
 import { useNavigate } from "react-router-dom";
+import { Post } from "../../models/post";
+import getPostsByPageNum from "../../services/posts-service";
+import HeaderComponent from "../shared/header-component";
+import ProgressComponent from "../shared/progress-component";
+import ScrollTop from "../shared/scroll-top-component";
+import PostComponent from "./post-component";
 
 interface PostsComponentState {
   pageNum: number;
@@ -50,7 +50,7 @@ const PostsComponent: React.FC = () => {
   const showAllPosts = () => {
     setState({
       pageNum: state.pageNum,
-      postsPerPage: 100,
+      postsPerPage: 10,
       posts: null,
     });
   };
@@ -59,7 +59,7 @@ const PostsComponent: React.FC = () => {
     if (state.posts) return;
     getPostsByPageNum(state.pageNum)
       .then((posts) => {
-        setState({
+                setState({
           pageNum: state.pageNum,
           postsPerPage: state.postsPerPage,
           posts,
